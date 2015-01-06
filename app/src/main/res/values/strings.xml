@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OhMyThisBetterWork</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="complexityTitle">Complexities!</string>
+    <string name="description">\n\nFind out time complexities and space complexities of different algorithms</string>
+    <string name="algorithmLabel">Algorithm Type:</string>
+
+    <string-array name="algorithms_array">
+        <item>(none selected)</item>
+        <item>Sorting</item>
+        <item>Searching</item>
+        <item>Data Structure</item>
+        <item>Graph</item>
+    </string-array>
+
+    <string name="title_activity_sorting">SortingActivity</string>
+    <string name="sorting_description">\nThis part presents several algorithms that solve the sorting problem.\n\nInput: A sequence of <i>n</i> numbers\n\nOutput: A permutation(reordering) of <i>n</i> numbers in ascending order</string>
+    <string name="sorting_title">Sorting</string>
+
+    <string name="title_activity_searching">SearchingActivity</string>
+    <string name="searching_title">Searching</string>
+    <string name="searching_description">\nThis part presents algorithms that can search data structures such as arrays or graphs.\n\nInput: A desired key object\n\nOutput: The location of the key and/or the key object itself</string>
+
+    <string name="title_activity_data_structure">DataStructureActivity</string>
+    <string name="data_structures_title">I Got NOTHING</string>
+    <string name="dataStructureImageDes">it\'s me!</string>
+
+</resources>

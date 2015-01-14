@@ -4,11 +4,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 
 
-public class SortingActivity extends ActionBarActivity {
+public class GraphActivity extends ActionBarActivity {
 
     char greekOp = 0x0398;
     String[] sorting = new String[]{"Algorithm", "Worst-case run time", "Average/Expected run time", "Insertion Sort",
@@ -19,17 +21,23 @@ public class SortingActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sorting);
-        GridView gridView = (GridView) findViewById(R.id.sorting_gridView);
+        setContentView(R.layout.activity_graph);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.graph_linLay);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sorting);
-        gridView.setAdapter(adapter);
+
+        final int adapterCount = adapter.getCount();
+
+        for (int i = 0; i < adapterCount; i++) {
+            View item = adapter.getView(i, null, null);
+            layout.addView(item);
+        }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sorting, menu);
+        getMenuInflater().inflate(R.menu.menu_graph, menu);
         return true;
     }
 
@@ -48,4 +56,3 @@ public class SortingActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-

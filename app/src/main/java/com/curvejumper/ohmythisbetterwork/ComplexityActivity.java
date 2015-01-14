@@ -83,9 +83,10 @@ public class ComplexityActivity extends ActionBarActivity implements AdapterView
                 startActivity(intent);
                 break;
             case "Graph":
+                intent = new Intent(this, GraphActivity.class);
                 //used to reset the Spinner gui!
                 supplySpinnerWithArray();
-                //something
+                startActivity(intent);
                 break;
             default:
                 //do nothing

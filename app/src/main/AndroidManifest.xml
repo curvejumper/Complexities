@@ -28,6 +28,10 @@
             android:name=".DataStructureActivity"
             android:label="@string/title_activity_data_structure" >
         </activity>
+        <activity
+            android:name=".GraphActivity"
+            android:label="@string/title_activity_graph" >
+        </activity>
     </application>
 
 </manifest>

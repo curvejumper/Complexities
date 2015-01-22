@@ -21,8 +21,6 @@ public class ComplexityActivity extends ActionBarActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complexity);
         supplySpinnerWithArray();
-
-
     }
 
     private void supplySpinnerWithArray(){

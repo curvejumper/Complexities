@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 
@@ -22,17 +23,11 @@ public class GraphActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
-        LinearLayout layout = (LinearLayout) findViewById(R.id.graph_linLay);
+        GridView gridView = (GridView) findViewById(R.id.graph_gridView);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sorting);
+        gridView.setAdapter(adapter);
 
-        final int adapterCount = adapter.getCount();
-
-        for (int i = 0; i < adapterCount; i++) {
-            View item = adapter.getView(i, null, null);
-            layout.addView(item);
-        }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
